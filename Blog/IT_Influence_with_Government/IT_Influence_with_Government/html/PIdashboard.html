@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Policy Influence Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #1e3a8a;
+      margin-bottom: 40px;
+    }
+
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      width: 280px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    canvas {
+      max-width: 500px;
+      margin: 40px auto;
+      display: block;
+    }
+    .PVD a{
+         color: black;
+    background-color:blue;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bolder;
+    background-size: auto;
+
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧠 Policy Influence of IT Companies in India</h1>
+
+  <div class="dashboard">
+    <div class="card">
+      <h3>Key Policy Areas</h3>
+      <ul>
+        <li>Data Privacy</li>
+        <li>Cybersecurity</li>
+        <li>Artificial Intelligence</li>
+        <li>Digital Infrastructure</li>
+        <li>Startup Laws</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Influential Bodies</h3>
+      <ul>
+        <li>MeitY</li>
+        <li>NITI Aayog</li>
+        <li>NASSCOM</li>
+        <li>Digital India Task Force</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Top Influencers</h3>
+      <ul>
+        <li>TCS</li>
+        <li>Infosys</li>
+        <li>Wipro</li>
+        <li>Google India</li>
+        <li>Microsoft India</li>
+      </ul>
+    </div>
+  </div>
+
+  <canvas id="policyChart"></canvas>
+
+  <script>
+    const ctx = document.getElementById('policyChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Data Privacy', 'Cybersecurity', 'AI', 'Digital Infra', 'Startup Policy'],
+        datasets: [{
+          label: 'Policy Involvement %',
+          data: [25, 20, 20, 20, 15],
+          backgroundColor: [
+            '#3b82f6',
+            '#10b981',
+            '#f59e0b',
+            '#6366f1',
+            '#ef4444'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Policy Areas Where IT Companies Influence the Most',
+            font: { size: 18 }
+          },
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+  </script>
+  <div class="PVD">
+    <center>
+    <a href="start_here.html">Click here to back</a>
+    </center>
+  </div>
+
+</body>
+</html>

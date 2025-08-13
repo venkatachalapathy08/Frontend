@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>India IT Sector Analysis</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #dbeafe, #fef9c3);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #1e3a8a;
+      text-shadow: 1px 1px 2px #cbd5e1;
+    }
+
+    .chart-container {
+      max-width: 90vw;
+      margin: 40px auto;
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
+    
+    .dashboard  a{
+           color: black;
+    background-color:blue;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bolder;
+    background-size: auto;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <h1>📊 India's IT Sector Impact Analysis</h1>
+
+  <!-- GDP Growth Chart -->
+  <div class="chart-container">
+    <h2>💹 IT Sector Contribution to India's GDP</h2>
+    <canvas id="gdpChart"></canvas>
+  </div>
+
+  <!-- Developer Count in Govt IT -->
+  <div class="chart-container">
+    <h2>👨‍💻 Developers in Government IT Organizations</h2>
+    <canvas id="govDevChart"></canvas>
+  </div>
+
+  <script>
+    // Chart 1: GDP Contribution Line Chart
+    const gdpCtx = document.getElementById('gdpChart').getContext('2d');
+    const gradient = gdpCtx.createLinearGradient(0, 0, 0, 400);
+    gradient.addColorStop(0, '#3b82f6');
+    gradient.addColorStop(1, '#bfdbfe');
+
+    new Chart(gdpCtx, {
+      type: 'line',
+      data: {
+        labels: ['2015', '2017', '2019', '2021', '2023'],
+        datasets: [{
+          label: 'IT Contribution to GDP (%)',
+          data: [4.5, 5.5, 6.2, 7.0, 7.5],
+          backgroundColor: gradient,
+          borderColor: '#1d4ed8',
+          borderWidth: 3,
+          pointBackgroundColor: '#1e40af',
+          pointBorderColor: '#93c5fd',
+          pointRadius: 6,
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            labels: {
+              color: '#1e3a8a',
+              font: { size: 14, weight: 'bold' }
+            }
+          },
+          title: {
+            display: true,
+            text: 'Growth of IT Sector in Indian Economy (2015–2023)',
+            font: { size: 18 },
+            color: '#1e3a8a'
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: '#1e3a8a' },
+            title: { display: true, text: 'Year', color: '#1e3a8a' }
+          },
+          y: {
+            beginAtZero: true,
+            suggestedMax: 10,
+            ticks: { color: '#1e3a8a' },
+            title: { display: true, text: 'GDP (%)', color: '#1e3a8a' }
+          }
+        }
+      }
+    });
+
+    // Chart 2: Bar Chart for Govt IT Developers
+    const devCtx = document.getElementById('govDevChart').getContext('2d');
+    new Chart(devCtx, {
+      type: 'bar',
+      data: {
+        labels: ['NIC', 'ISRO', 'DRDO', 'CDAC', 'BEL', 'RailTel', 'MeitY Projects'],
+        datasets: [{
+          label: 'No. of Developers (Estimated)',
+          data: [8500, 3000, 2500, 4000, 1800, 1200, 6000],
+          backgroundColor: [
+            '#1e40af', '#0ea5e9', '#22c55e', '#f59e0b', '#e11d48', '#9333ea', '#10b981'
+          ],
+          borderRadius: 10,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false
+          },
+          title: {
+            display: true,
+            text: 'Estimated IT Developer Count in Govt Sectors',
+            font: { size: 18 },
+            color: '#1e3a8a'
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: '#1e3a8a' },
+            title: { display: true, text: 'Organization', color: '#1e3a8a' }
+          },
+          y: {
+            beginAtZero: true,
+            ticks: { color: '#1e3a8a' },
+            title: { display: true, text: 'Developers Count', color: '#1e3a8a' }
+          }
+        }
+      }
+    });
+  </script>
+  <div class="dashboard">
+    <center>
+    <a href="start_here.html">Click here to Back</a>
+    </center>
+  </div>
+
+</body>
+</html>

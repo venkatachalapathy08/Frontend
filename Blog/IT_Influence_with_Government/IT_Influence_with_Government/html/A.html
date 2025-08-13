@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advantages of IT Companies Influencing Government</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 30px;
+      background-color: #f5f5f5;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 50px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #d3f2e3;
+    }
+
+    .chart-container {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+    }
+    .adt a{
+        color: black;
+    background-color:red;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bolder;
+    background-size: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✅ Advantages of Government & IT Company Collaboration</h1>
+
+  <!-- Explanation Section -->
+  <div class="section">
+    <h2>📝 Explanation</h2>
+    <p>
+      The collaboration between IT companies and the government plays a major role in building a tech-driven public system.
+      From faster citizen services to transparent processes, IT firms have modernized how the government works. They enable
+      efficient platforms like income tax portals, online passport systems, and digital health records. With technologies
+      like AI, cloud, and cybersecurity, these companies help the government deliver smarter, faster, and more secure services.
+      They also support national missions like Digital India and Smart Cities, while helping reduce manual work, increase
+      transparency, and improve public satisfaction.
+    </p>
+  </div>
+
+  <!-- Table Section -->
+  <div class="section">
+    <h2>📋 Advantage Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Benefit Area</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Faster Public Services</td>
+          <td>Quick access to services like tax filing, passport, etc.</td>
+        </tr>
+        <tr>
+          <td>Transparency</td>
+          <td>Reduces corruption through automation and digital records.</td>
+        </tr>
+        <tr>
+          <td>Cost-Effective</td>
+          <td>Uses cloud and existing platforms instead of building from scratch.</td>
+        </tr>
+        <tr>
+          <td>Use of Advanced Tech</td>
+          <td>AI, Big Data, and Cybersecurity improve decision-making and security.</td>
+        </tr>
+        <tr>
+          <td>Supports National Missions</td>
+          <td>Boosts Digital India, Smart Cities, Skill India goals.</td>
+        </tr>
+        <tr>
+          <td>Employment & Training</td>
+          <td>Creates tech jobs and skilling opportunities for youth.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Chart Section -->
+  <div class="section chart-container">
+    <h2>📊 Advantage Impact Graph</h2>
+    <canvas id="advantageChart" height="120"></canvas>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('advantageChart').getContext('2d');
+    const advantageChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Faster Services',
+          'Transparency',
+          'Cost Saving',
+          'Advanced Tech',
+          'National Missions',
+          'Employment & Skills'
+        ],
+        datasets: [{
+          label: 'Impact Level (1 to 10)',
+          data: [9, 8, 7, 9, 8, 7],
+          backgroundColor: '#38b2ac',
+          borderRadius: 10
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Impact Score'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Benefit Area'
+            }
+          }
+        },
+        plugins: {
+          legend: { display: false }
+        }
+      }
+    });
+  </script>
+<br><br>
+  <div class="adt">
+    <center>
+        <a href="advantages.html">Click here to back</a>
+    </center>
+  </div>
+
+</body>
+</html>
